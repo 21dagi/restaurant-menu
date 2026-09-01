@@ -32,15 +32,14 @@ export default function Testimonials() {
           <h2 className="mt-2 text-3xl font-black sm:text-4xl md:text-5xl text-white">
             What Addis is saying
           </h2>
-          <p className="mt-2 text-xs text-gray-500 sm:text-sm">Swipe or scroll horizontally to read reviews</p>
         </div>
 
-        {/* 1 Row Horizontal Scrollable Container */}
-        <div className="mt-10 flex flex-nowrap overflow-x-auto gap-4 sm:gap-6 pb-4 custom-scrollbar snap-x snap-mandatory">
+        {/* 1 Row Centered & Horizontally Scrollable without visible scrollbar */}
+        <div className="mt-10 flex flex-nowrap overflow-x-auto justify-start sm:justify-center items-stretch gap-4 sm:gap-6 pb-2 no-scrollbar snap-x snap-mandatory">
           {reviews.map((review) => (
             <article
               key={review.name}
-              className="shrink-0 w-[280px] sm:w-[340px] md:w-[380px] snap-start flex flex-col justify-between rounded-3xl border border-white/10 bg-[#1b1b1b] p-6 sm:p-8"
+              className="shrink-0 w-[280px] sm:w-[320px] md:w-[360px] snap-center flex flex-col justify-between rounded-3xl border border-white/10 bg-[#1b1b1b] p-6 sm:p-8"
             >
               <div>
                 <div className="flex gap-1 text-yellow-400">

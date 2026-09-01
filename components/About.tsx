@@ -66,7 +66,7 @@ export default function About() {
           </p>
 
           {/* 1 Row Horizontal Scrollable Feature Cards */}
-          <div className="mt-6 flex flex-nowrap overflow-x-auto gap-3 pb-3 custom-scrollbar snap-x snap-mandatory">
+          <div className="mt-6 flex flex-nowrap overflow-x-auto gap-3 pb-2 no-scrollbar snap-x snap-mandatory">
             {features.map((feature) => {
               const Icon = feature.icon;
               return (

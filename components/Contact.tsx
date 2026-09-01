@@ -38,17 +38,17 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* 1 Row Horizontal Scrollable Container */}
-        <div className="mt-10 flex flex-nowrap overflow-x-auto gap-4 pb-4 custom-scrollbar snap-x snap-mandatory">
+        {/* 1 Row Centered & Horizontally Scrollable without visible scrollbar */}
+        <div className="mt-10 flex flex-nowrap overflow-x-auto justify-start md:justify-center items-stretch gap-4 pb-2 no-scrollbar snap-x snap-mandatory">
           {contactDetails.map((item) => {
             const Icon = item.icon;
             return (
               <article
                 key={item.title}
-                className="shrink-0 w-[240px] sm:w-[270px] snap-start flex flex-col items-center justify-between rounded-3xl border border-[#d8c9aa] bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className="shrink-0 w-[230px] sm:w-[260px] snap-center flex flex-col items-center justify-between rounded-3xl border border-[#d8c9aa] bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="mx-auto flex h-13 w-13 items-center justify-center rounded-2xl bg-[#20170f] text-yellow-400 p-3">
-                  <Icon size={24} />
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-[#20170f] text-yellow-400 p-2.5">
+                  <Icon size={22} />
                 </div>
                 <h3 className="mt-4 text-base font-black">{item.title}</h3>
                 <p className="mt-2 whitespace-pre-line text-xs leading-relaxed text-[#6b5a48] sm:text-sm">{item.value}</p>

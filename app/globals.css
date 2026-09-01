@@ -20,6 +20,15 @@ body {
   color: #111111;
 }
 
+/* Hide scrollbar completely while maintaining scroll functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Luxury Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;

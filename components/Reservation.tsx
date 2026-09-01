@@ -100,174 +100,176 @@ export default function Reservation() {
 
   return (
     <>
-      <section id="reservation" className="bg-[#24170f] px-6 py-24">
-        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2">
+      <section id="reservation" className="bg-[#24170f] px-4 py-14 sm:px-6 sm:py-20 text-white">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          {/* Left Text & Info */}
           <motion.div
-            initial={{ opacity: 0, x: -35 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <p className="font-bold uppercase tracking-[0.3em] text-yellow-400">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-yellow-400 sm:text-sm">
               Reservation
             </p>
 
-            <h2 className="mt-4 text-4xl font-black md:text-5xl text-white">
+            <h2 className="mt-2 text-2xl font-black sm:text-3xl md:text-4xl lg:text-5xl text-white">
               Book a Table at Wow Burger
             </h2>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[#d7c8ba]">
+            <p className="mt-3 text-xs leading-relaxed text-[#d7c8ba] sm:mt-4 sm:text-sm sm:leading-7">
               Planning a group burger feast, birthday party, or weekend gathering at
-              Wow Burger Bole? Let us know in advance and we&apos;ll have your table
+              Wow Burger Bole? Reserve your spot in advance and we&apos;ll have your table
               ready.
             </p>
 
-            <div className="mt-10 grid gap-5 sm:grid-cols-2">
-              <div className="rounded-3xl border border-yellow-400/20 bg-white/5 p-6">
-                <Clock3 className="text-yellow-400" size={28} />
-                <p className="mt-4 font-bold text-yellow-400">
+            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+              <div className="rounded-2xl border border-yellow-400/20 bg-white/5 p-4 sm:p-5">
+                <Clock3 className="text-yellow-400" size={24} />
+                <p className="mt-3 text-xs font-bold text-yellow-400 sm:text-sm">
                   Opening Hours
                 </p>
-                <p className="mt-2 text-[#d7c8ba]">
+                <p className="mt-1 text-xs text-[#d7c8ba]">
                   Monday – Sunday
                 </p>
-                <p className="text-[#d7c8ba]">
+                <p className="text-xs text-yellow-400/90 font-bold">
                   10:00 AM – 12:00 AM
                 </p>
               </div>
 
-              <div className="rounded-3xl border border-yellow-400/20 bg-white/5 p-6">
-                <CalendarDays className="text-yellow-400" size={28} />
-                <p className="mt-4 font-bold text-yellow-400">
+              <div className="rounded-2xl border border-yellow-400/20 bg-white/5 p-4 sm:p-5">
+                <CalendarDays className="text-yellow-400" size={24} />
+                <p className="mt-3 text-xs font-bold text-yellow-400 sm:text-sm">
                   Group & Event Bookings
                 </p>
-                <p className="mt-2 text-[#d7c8ba]">
-                  Special seating available for birthdays & group hangouts.
+                <p className="mt-1 text-xs text-[#d7c8ba]">
+                  Seating available for birthdays & group hangouts.
                 </p>
               </div>
             </div>
           </motion.div>
 
+          {/* Right Responsive Form Container */}
           <motion.form
-            initial={{ opacity: 0, x: 35 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className="grid gap-5 rounded-[2rem] bg-[#f7f0df] p-6 text-[#20170f] shadow-2xl sm:grid-cols-2 sm:p-8"
+            className="rounded-3xl bg-[#f7f0df] p-4 sm:p-6 md:p-8 text-[#20170f] shadow-2xl"
           >
-            <div>
-              <label className="mb-2 block text-sm font-bold text-[#6b4f2b]">
-                Full Name
-              </label>
-
-              <input
-                required
-                type="text"
-                name="name"
-                placeholder="Enter your name"
-                value={form.name}
-                onChange={handleChange}
-                className="w-full rounded-xl border border-[#d8c9aa] bg-white px-4 py-4 outline-none transition focus:border-[#a67c00] focus:ring-4 focus:ring-yellow-100"
-              />
-            </div>
-
-            <div>
-              <label className="mb-2 block text-sm font-bold text-[#6b4f2b]">
-                Phone Number (Ethiopian format)
-              </label>
-
-              <input
-                required
-                type="tel"
-                name="phone"
-                placeholder="0911 234 567"
-                value={form.phone}
-                onChange={handleChange}
-                className="w-full rounded-xl border border-[#d8c9aa] bg-white px-4 py-4 outline-none transition focus:border-[#a67c00] focus:ring-4 focus:ring-yellow-100"
-              />
-            </div>
-
-            <div>
-              <label className="mb-2 block text-sm font-bold text-[#6b4f2b]">
-                Reservation Date
-              </label>
-
-              <input
-                required
-                type="date"
-                name="date"
-                min={minimumDate}
-                value={form.date}
-                onChange={handleChange}
-                className="w-full rounded-xl border border-[#d8c9aa] bg-white px-4 py-4 outline-none transition focus:border-[#a67c00] focus:ring-4 focus:ring-yellow-100"
-              />
-            </div>
-
-            <div>
-              <label className="mb-2 block text-sm font-bold text-[#6b4f2b]">
-                Preferred Time
-              </label>
-
-              <select
-                required
-                name="time"
-                value={form.time}
-                onChange={handleChange}
-                className="w-full rounded-xl border border-[#d8c9aa] bg-white px-4 py-4 outline-none transition focus:border-[#a67c00] focus:ring-4 focus:ring-yellow-100"
-              >
-                <option value="">Select time</option>
-
-                {timeSlots.map((time) => (
-                  <option key={time} value={time}>
-                    {time}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="sm:col-span-2">
-              <label className="mb-2 block text-sm font-bold text-[#6b4f2b]">
-                Number of Guests
-              </label>
-
-              <div className="relative">
-                <Users
-                  size={18}
-                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#a67c00]"
-                />
-
-                <select
-                  name="guests"
-                  value={form.guests}
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+              {/* Full Name */}
+              <div className="col-span-1 sm:col-span-1">
+                <label className="mb-1 block text-xs font-bold text-[#6b4f2b]">
+                  Full Name *
+                </label>
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  value={form.name}
                   onChange={handleChange}
-                  className="w-full rounded-xl border border-[#d8c9aa] bg-white py-4 pl-12 pr-4 outline-none transition focus:border-[#a67c00] focus:ring-4 focus:ring-yellow-100"
+                  className="w-full rounded-xl border border-[#d8c9aa] bg-white px-3.5 py-2.5 sm:py-3 text-xs sm:text-sm outline-none transition focus:border-[#a67c00] focus:ring-2 focus:ring-yellow-400/20"
+                />
+              </div>
+
+              {/* Phone */}
+              <div className="col-span-1 sm:col-span-1">
+                <label className="mb-1 block text-xs font-bold text-[#6b4f2b]">
+                  Phone Number *
+                </label>
+                <input
+                  required
+                  type="tel"
+                  name="phone"
+                  placeholder="0911 234 567"
+                  value={form.phone}
+                  onChange={handleChange}
+                  className="w-full rounded-xl border border-[#d8c9aa] bg-white px-3.5 py-2.5 sm:py-3 text-xs sm:text-sm outline-none transition focus:border-[#a67c00] focus:ring-2 focus:ring-yellow-400/20"
+                />
+              </div>
+
+              {/* Date */}
+              <div className="col-span-1 sm:col-span-1">
+                <label className="mb-1 block text-xs font-bold text-[#6b4f2b]">
+                  Reservation Date *
+                </label>
+                <input
+                  required
+                  type="date"
+                  name="date"
+                  min={minimumDate}
+                  value={form.date}
+                  onChange={handleChange}
+                  className="w-full rounded-xl border border-[#d8c9aa] bg-white px-3.5 py-2.5 sm:py-3 text-xs sm:text-sm outline-none transition focus:border-[#a67c00] focus:ring-2 focus:ring-yellow-400/20"
+                />
+              </div>
+
+              {/* Time */}
+              <div className="col-span-1 sm:col-span-1">
+                <label className="mb-1 block text-xs font-bold text-[#6b4f2b]">
+                  Preferred Time *
+                </label>
+                <select
+                  required
+                  name="time"
+                  value={form.time}
+                  onChange={handleChange}
+                  className="w-full rounded-xl border border-[#d8c9aa] bg-white px-3.5 py-2.5 sm:py-3 text-xs sm:text-sm outline-none transition focus:border-[#a67c00] focus:ring-2 focus:ring-yellow-400/20"
                 >
-                  <option value="1">1 Guest</option>
-                  <option value="2">2 Guests</option>
-                  <option value="3">3 Guests</option>
-                  <option value="4">4 Guests</option>
-                  <option value="5">5 Guests</option>
-                  <option value="6+">6+ Guests (Party)</option>
+                  <option value="">Select time</option>
+                  {timeSlots.map((time) => (
+                    <option key={time} value={time}>
+                      {time}
+                    </option>
+                  ))}
                 </select>
+              </div>
+
+              {/* Guests */}
+              <div className="col-span-1 sm:col-span-2">
+                <label className="mb-1 block text-xs font-bold text-[#6b4f2b]">
+                  Number of Guests
+                </label>
+                <div className="relative">
+                  <Users
+                    size={16}
+                    className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[#a67c00]"
+                  />
+                  <select
+                    name="guests"
+                    value={form.guests}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-[#d8c9aa] bg-white py-2.5 pl-10 pr-4 sm:py-3 text-xs sm:text-sm outline-none transition focus:border-[#a67c00] focus:ring-2 focus:ring-yellow-400/20"
+                  >
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6+">6+ Guests (Party)</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Requests */}
+              <div className="col-span-1 sm:col-span-2">
+                <label className="mb-1 block text-xs font-bold text-[#6b4f2b]">
+                  Special Requests (Optional)
+                </label>
+                <textarea
+                  rows={2}
+                  name="requests"
+                  placeholder="Birthday surprise, outdoor seating, fast food pre-order, etc."
+                  value={form.requests}
+                  onChange={handleChange}
+                  className="w-full resize-none rounded-xl border border-[#d8c9aa] bg-white px-3.5 py-2.5 sm:py-3 text-xs sm:text-sm outline-none transition focus:border-[#a67c00] focus:ring-2 focus:ring-yellow-400/20"
+                />
               </div>
             </div>
 
-            <div className="sm:col-span-2">
-              <label className="mb-2 block text-sm font-bold text-[#6b4f2b]">
-                Special Requests
-              </label>
-
-              <textarea
-                rows={4}
-                name="requests"
-                placeholder="Birthday surprise, outdoor seating, fast food pre-order, etc."
-                value={form.requests}
-                onChange={handleChange}
-                className="w-full rounded-xl border border-[#d8c9aa] bg-white px-4 py-4 outline-none transition focus:border-[#a67c00] focus:ring-4 focus:ring-yellow-100"
-              />
-            </div>
-
             {error && (
-              <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-bold text-red-600 sm:col-span-2">
+              <div className="mt-3 rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-xs font-bold text-red-600">
                 {error}
               </div>
             )}
@@ -275,7 +277,7 @@ export default function Reservation() {
             <button
               type="submit"
               disabled={loading}
-              className="rounded-xl bg-[#20170f] px-6 py-4 font-black text-yellow-400 transition hover:bg-black disabled:cursor-not-allowed disabled:opacity-60 sm:col-span-2"
+              className="mt-4 w-full rounded-xl bg-[#20170f] py-3 sm:py-3.5 text-xs sm:text-sm font-black text-yellow-400 transition hover:bg-black disabled:cursor-not-allowed disabled:opacity-60 shadow-lg"
             >
               {loading ? "Submitting Booking..." : "Book My Table"}
             </button>
@@ -283,6 +285,7 @@ export default function Reservation() {
         </div>
       </section>
 
+      {/* Confirmation Modal */}
       <AnimatePresence>
         {showConfirmation && submittedReservation && (
           <motion.div
@@ -290,37 +293,37 @@ export default function Reservation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setShowConfirmation(false)}
-            className="fixed inset-0 z-[120] flex items-center justify-center bg-black/80 px-5 backdrop-blur-sm"
+            className="fixed inset-0 z-[120] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 25 }}
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9 }}
               onClick={(event) => event.stopPropagation()}
-              className="relative w-full max-w-lg rounded-[2rem] bg-[#f7f0df] p-8 text-center text-[#20170f] shadow-2xl"
+              className="relative w-full max-w-md rounded-3xl bg-[#f7f0df] p-6 text-center text-[#20170f] shadow-2xl sm:p-8"
             >
               <button
                 type="button"
                 onClick={() => setShowConfirmation(false)}
-                className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#20170f] text-white transition hover:bg-yellow-400 hover:text-black"
+                className="absolute right-3.5 top-3.5 flex h-9 w-9 items-center justify-center rounded-full bg-[#20170f] text-white transition hover:bg-yellow-400 hover:text-black"
               >
-                <X size={20} />
+                <X size={18} />
               </button>
 
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-green-600">
-                <CheckCircle2 size={42} />
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-600">
+                <CheckCircle2 size={36} />
               </div>
 
-              <h3 className="mt-6 text-3xl font-black">
+              <h3 className="mt-4 text-xl sm:text-2xl font-black">
                 Reservation Confirmed!
               </h3>
 
-              <p className="mt-3 leading-7 text-[#6b5a48]">
-                Thank you, {submittedReservation.name}! Your table at Wow Burger is requested.
+              <p className="mt-2 text-xs sm:text-sm leading-relaxed text-[#6b5a48]">
+                Thank you, <span className="font-bold">{submittedReservation.name}</span>! Your table request at Wow Burger Bole has been received.
               </p>
 
-              <div className="mt-6 space-y-3 rounded-2xl bg-white p-5 text-left">
-                <div className="flex justify-between gap-4">
+              <div className="mt-4 space-y-2 rounded-2xl bg-white p-4 text-left text-xs sm:text-sm">
+                <div className="flex justify-between gap-2">
                   <span className="text-[#6b5a48]">Date</span>
                   <span className="font-bold">
                     {new Date(
@@ -329,14 +332,14 @@ export default function Reservation() {
                   </span>
                 </div>
 
-                <div className="flex justify-between gap-4">
+                <div className="flex justify-between gap-2">
                   <span className="text-[#6b5a48]">Time</span>
                   <span className="font-bold">
                     {submittedReservation.time}
                   </span>
                 </div>
 
-                <div className="flex justify-between gap-4">
+                <div className="flex justify-between gap-2">
                   <span className="text-[#6b5a48]">Guests</span>
                   <span className="font-bold">
                     {submittedReservation.guests}
@@ -344,14 +347,14 @@ export default function Reservation() {
                 </div>
               </div>
 
-              <p className="mt-5 text-sm text-[#6b5a48]">
+              <p className="mt-3 text-[11px] sm:text-xs text-[#6b5a48]">
                 Our team in Bole will confirm your spot via call or SMS shortly.
               </p>
 
               <button
                 type="button"
                 onClick={() => setShowConfirmation(false)}
-                className="mt-7 w-full rounded-xl bg-[#20170f] px-6 py-4 font-black text-yellow-400 transition hover:bg-black"
+                className="mt-5 w-full rounded-xl bg-[#20170f] py-3 text-xs sm:text-sm font-black text-yellow-400 transition hover:bg-black"
               >
                 Done
               </button>

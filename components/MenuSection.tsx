@@ -265,7 +265,7 @@ export default function MenuSection({ onCartChange, currencySymbol = "Br.", what
           </div>
 
           {/* Grid Container with Controlled Scroll Viewport */}
-          <div className="mt-4 max-h-[700px] overflow-y-auto pr-1 custom-scrollbar">
+          <div className="mt-4 max-h-[700px] overflow-y-auto no-scrollbar">
             <div className="grid grid-cols-2 gap-3.5 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
               {paginatedItems.map((dish, index) => {
                 const cat = getCatName(dish.categoryId);
