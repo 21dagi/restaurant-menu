@@ -16,14 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/85" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-5 text-sm font-bold uppercase tracking-[0.35em] text-yellow-400 sm:text-base"
-        >
-          🇪🇹 Addis Ababa&apos;s Favourite
-        </motion.p>
+
 
         <motion.h1
           initial={{ opacity: 0, y: 35 }}
