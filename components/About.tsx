@@ -65,23 +65,22 @@ export default function About() {
             and signature layered Ethiopian juices. Made fresh to order with love.
           </p>
 
-          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
+          {/* 1 Row Horizontal Scrollable Feature Cards */}
+          <div className="mt-6 flex flex-nowrap overflow-x-auto gap-3 pb-3 custom-scrollbar snap-x snap-mandatory">
             {features.map((feature) => {
               const Icon = feature.icon;
               return (
                 <div
                   key={feature.title}
-                  className="flex items-start gap-3 rounded-2xl border border-[#d8c9aa] bg-white p-3.5 sm:flex-col sm:items-start sm:p-4"
+                  className="shrink-0 w-[210px] sm:w-[230px] snap-start flex flex-col items-start rounded-2xl border border-[#d8c9aa] bg-white p-4 shadow-sm"
                 >
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#20170f] text-yellow-400">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#20170f] text-yellow-400">
                     <Icon size={18} />
                   </div>
-                  <div>
-                    <h3 className="text-xs font-black sm:text-sm">{feature.title}</h3>
-                    <p className="mt-0.5 text-[11px] leading-snug text-[#6b5a48] sm:mt-1 sm:text-xs">
-                      {feature.description}
-                    </p>
-                  </div>
+                  <h3 className="mt-3 text-xs font-black sm:text-sm">{feature.title}</h3>
+                  <p className="mt-1 text-[11px] leading-snug text-[#6b5a48] sm:text-xs">
+                    {feature.description}
+                  </p>
                 </div>
               );
             })}

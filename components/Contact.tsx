@@ -28,29 +28,30 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="bg-[#f7f0df] px-6 py-24 text-[#20170f]">
+    <section id="contact" className="bg-[#f7f0df] px-4 py-16 sm:px-6 sm:py-24 text-[#20170f]">
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
           <p className="font-bold uppercase tracking-[0.3em] text-[#a67c00]">Contact Us</p>
-          <h2 className="mt-4 text-4xl font-black md:text-5xl">Visit Wow Burger</h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#6b5a48]">
-            Visit us for authentic cuisine, warm hospitality, and an unforgettable dining experience.
+          <h2 className="mt-2 text-3xl font-black sm:text-4xl md:text-5xl">Visit Wow Burger</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-xs text-[#6b5a48] sm:text-sm">
+            Visit us in Bole for fresh smash burgers, wood-fired pizzas, and delicious Ethiopian juices.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* 1 Row Horizontal Scrollable Container */}
+        <div className="mt-10 flex flex-nowrap overflow-x-auto gap-4 pb-4 custom-scrollbar snap-x snap-mandatory">
           {contactDetails.map((item) => {
             const Icon = item.icon;
             return (
               <article
                 key={item.title}
-                className="rounded-3xl border border-[#d8c9aa] bg-white p-7 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className="shrink-0 w-[240px] sm:w-[270px] snap-start flex flex-col items-center justify-between rounded-3xl border border-[#d8c9aa] bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#20170f] text-yellow-400">
-                  <Icon size={26} />
+                <div className="mx-auto flex h-13 w-13 items-center justify-center rounded-2xl bg-[#20170f] text-yellow-400 p-3">
+                  <Icon size={24} />
                 </div>
-                <h3 className="mt-5 text-lg font-black">{item.title}</h3>
-                <p className="mt-2 whitespace-pre-line leading-7 text-[#6b5a48]">{item.value}</p>
+                <h3 className="mt-4 text-base font-black">{item.title}</h3>
+                <p className="mt-2 whitespace-pre-line text-xs leading-relaxed text-[#6b5a48] sm:text-sm">{item.value}</p>
               </article>
             );
           })}
