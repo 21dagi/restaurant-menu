@@ -1,0 +1,50 @@
+[
+  {
+    "id": "gal1",
+    "title": "Wow Classic Burger",
+    "category": "Food",
+    "image": "/images/hero.jpg",
+    "description": "The burger that started it all — thick smash patty, golden bun, Wow secret sauce.",
+    "isFeatured": true
+  },
+  {
+    "id": "gal2",
+    "title": "Our Diner Space",
+    "category": "Ambiance",
+    "image": "/images/gallery2.jpg",
+    "description": "Cool urban diner vibes with warm lighting and cozy seating for every group.",
+    "isFeatured": true
+  },
+  {
+    "id": "gal3",
+    "title": "Fresh in the Kitchen",
+    "category": "Kitchen",
+    "image": "/images/gallery3.jpg",
+    "description": "Every order prepared fresh — from hand-pressed patties to hand-cut fries.",
+    "isFeatured": false
+  },
+  {
+    "id": "gal4",
+    "title": "BBQ Chicken Pizza",
+    "category": "Food",
+    "image": "/images/gallery4.jpg",
+    "description": "Smoky BBQ base, grilled chicken, jalapeños and mozzarella — baked to perfection.",
+    "isFeatured": true
+  },
+  {
+    "id": "gal5",
+    "title": "Layered Juice & Shakes",
+    "category": "Drinks",
+    "image": "/images/gallery1.jpg",
+    "description": "Colourful layered juices and thick milkshakes made fresh for every order.",
+    "isFeatured": true
+  },
+  {
+    "id": "gal6",
+    "title": "Beef Shawarma Wrap",
+    "category": "Food",
+    "image": "/images/about.jpg",
+    "description": "Spiced beef, tahini, pickled veg and chilli sauce — folded in warm flatbread.",
+    "isFeatured": false
+  }
+]

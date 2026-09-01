@@ -1,0 +1,9 @@
+[
+  { "id": "cat1", "name": "Burgers", "slug": "burgers", "icon": "🍔", "order": 1, "isActive": true },
+  { "id": "cat2", "name": "Pizza", "slug": "pizza", "icon": "🍕", "order": 2, "isActive": true },
+  { "id": "cat3", "name": "Sandwiches", "slug": "sandwiches", "icon": "🥪", "order": 3, "isActive": true },
+  { "id": "cat4", "name": "Chicken", "slug": "chicken", "icon": "🍗", "order": 4, "isActive": true },
+  { "id": "cat5", "name": "Shawarma", "slug": "shawarma", "icon": "🌯", "order": 5, "isActive": true },
+  { "id": "cat6", "name": "Sides & Extras", "slug": "sides-extras", "icon": "🍟", "order": 6, "isActive": true },
+  { "id": "cat7", "name": "Drinks", "slug": "drinks", "icon": "🥤", "order": 7, "isActive": true }
+]

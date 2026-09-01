@@ -1,0 +1,20 @@
+{
+  "restaurantName": "Wow Burger",
+  "tagLine": "Ethiopia's #1 Burger & Fast Food Joint",
+  "currencySymbol": "Br.",
+  "currencyCode": "ETB",
+  "phone": "+251 91 123 4567",
+  "whatsappNumber": "251911234567",
+  "email": "order@wowburger.et",
+  "address": "Bole Road, Addis Ababa, Ethiopia",
+  "mapUrl": "https://maps.google.com/?q=Bole+Road+Addis+Ababa",
+  "openingHours": "10:00 AM – 12:00 AM",
+  "openingDays": "Monday – Sunday",
+  "wifiSSID": "WowBurger_Free",
+  "wifiPassword": "wowburger2026",
+  "tableCount": 20,
+  "adminPin": "1234",
+  "primaryColor": "#f59e0b",
+  "heroImage": "/images/hero.jpg",
+  "logoText": "Wow Burger"
+}
